@@ -4,6 +4,7 @@ subtitle: Curso 2019-2020
 author: Juan Carlos Sáez Alcaide
 theme: white
 pandoc_columns: true
+revealjs-url: "."
 ---
 
 
