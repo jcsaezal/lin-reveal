@@ -1,0 +1,8 @@
+pandoc_common:
+  filters:
+  - teaching_md  
+  input_files:
+  - slides.md
+pandoc_targets:
+  HTML:
+    options: -t revealjs --slide-level=2 -s -o index.html
