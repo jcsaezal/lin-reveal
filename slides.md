@@ -59,7 +59,8 @@ revealjs-url: "."
 
 ## Objetivo
 
-Estudio de aspectos avanzados de sistemas operativos
+* Estudio de aspectos avanzados de sistemas operativos
+	- 2 créditos de teoría + 4 créditos de lab.
 
 ::: {.columns}
 
@@ -223,6 +224,8 @@ Datos: <http://gs.statcounter.com/os-market-share>
 
 ## Prácticas 
 
+::: incremental
+
 * Sobre una Máquina Virtual de GNU/Linux
 	- Programación en "C" en modo kernel
 	-  ... casi siempre con módulos cargables del núcleo
@@ -233,6 +236,7 @@ Datos: <http://gs.statcounter.com/os-market-share>
 	1. Gestión de procesos y sincronización en el kernel
 	1. Gestión de interrupciones y trabajos diferidos
 
+:::
 
 <!-- NOTES
 [PASAR A PRACTICAS!!]
@@ -254,17 +258,37 @@ Datos: <http://gs.statcounter.com/os-market-share>
 	4. Interrupciones y mecanismos para diferir el trabajo en Linux
 -->
 
+
+
 ## Prácticas 
 
-* En la práctica 3 se desarrollará un driver en Linux para el dispositivo Blinkstick Strip (USB)
+En la práctica 3 se desarrollará un driver en Linux para el dispositivo Blinkstick Strip (USB)
 
+
+::: {.columns}
+
+:::: {.column}
+
+![](charts/blinkstick-off.jpeg){width=80%}\  
+
+:::: 
+
+:::: {.column}
+
+![](charts/blinkstick-on.jpeg){width=80%}\ 
+
+:::: 
+
+:::
+
+
+
+<!--
 ![](charts/blinkstick-off.jpeg){width=50%}\ 
 
 ![](charts/blinkstick-connection.jpeg){width=50%}\ 
 ![](charts/blinkstick-on.jpeg){width=50%}\ 
 
-
-<!--
 [SKIP SI SOLOS]
 * Es muy importante que gestionemos esto de los grupos cuanto antes
 [COMMON]
@@ -282,10 +306,12 @@ Datos: <http://gs.statcounter.com/os-market-share>
 
 ## Método de evaluación 
 
-* Dos modalidades a elegir
-	- Examen final:  *NotaFinal=NotaExamen*
-	- Evaluación continua:
-		- Asistencia obligatoria
+[**Dos modalidades a elegir**]{color=blue}
+
+A) Examen final:  
+	- *NotaFinal=NotaExamen*
+B) Evaluación continua:
+	- Asistencia obligatoria
 
 
 ![](charts/notas.png){width=60% align=center}\ 
@@ -313,5 +339,7 @@ Datos: <http://gs.statcounter.com/os-market-share>
 ## 
 
 ![](charts/questions2.jpg){width=80% align=center}\ 
+
+Presentación disponible en <http://bit.ly/2wJ4fqH>
 
 
