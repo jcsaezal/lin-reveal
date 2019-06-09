@@ -1,7 +1,9 @@
 ---
 title: Arquitectura Interna de Linux y Android
 subtitle: Curso 2019-2020
-author: Juan Carlos Sáez Alcaide
+author:
+- Juan Carlos Sáez Alcaide
+- <http://bit.ly/2wJ4fqH>
 theme: white
 pandoc_columns: true
 revealjs-url: "."
@@ -11,9 +13,15 @@ revealjs-url: "."
 
 ## Sobre mí
 
-* **Juan Carlos Sáez Alcaide** (<jcsaezal@ucm.es>)
-	- Dpto. Arquitectura de Computadores y Automática 
-	
+
+**Juan Carlos Sáez Alcaide** (<jcsaezal@ucm.es>)
+
+
+::: incremental 
+
+* Prof. del Dpto. Arquitectura de Computadores y Automática 
+
+
 * Miembro del grupo de investigación [[ArTeCS]{.underline}](https://artecs.dacya.ucm.es/) 
 	- Interacción entre el software de sistema y la arquitectura
 	- Computación de altas prestaciones 
@@ -21,29 +29,29 @@ revealjs-url: "."
 	- ...
 
 * Representante en la UCM de la asociación internacional USENIX
-	- USENIX Symposium on Operating Systems Design and Implementation (OSDI)
-	- USENIX Annual Technical Conference (ATC)
-	- Login (USENIX Magazine) - [\underline{link} a ejemplares en PDF](https://drive.google.com/drive/folders/0B2SwhQV-zKm2YVJmck9vUDh5ZzA?usp=sharing)  
+	- Login (USENIX Magazine) - [link a ejemplares en PDF](https://drive.google.com/drive/folders/0B2SwhQV-zKm2YVJmck9vUDh5ZzA?usp=sharing)  
+
+
+:::
+
 
 <!-- NOTES
-* Muy buenas tardes a todos
-	- [Pasar slide]
-	
-* Para aquellos que no me conozcais, soy Juan Carlos Saez (Prof. del DPTO )
-	* MI CORREO AQUI.. 
-* También soy miembro del GINV... 
-	- Aquí se muestran algunas de los temas de inv. en los que trabajamos en el grupo como ...
-* QUIZAS DE CARA A ESTA ASIGNATURA LO MAS RELEVANTE QUE DEBEIS SABER DE MI
-	- Representante ...
-		* Alguien ha oido? [Mal asunto]
-		* Organización internacional con sede en la universidad de Berkely CALIFORNIA, que entre otras cosas se ocupa de organizar congresos de gran relevancia en el ámbito de sistemas op, SF y SOBRE TODO SEG
-			- MÁS representatuvi...
-				* Mas relevantes en seguridad que existen
-		* Como rep: os he de comentar que si deseais asistir, podría conseguiros la inscripción gratis (El viaje a donde sea no, pero si la insc) 600 euros...
-	- Otro aspecto significativo de la asociacion es la revista login, que saca al menos 4 veces al año
-		- Contiene artículos técnicos y de investigación sobre seguridad
-		- Yo os recomiendo que le echeis un ojo
-			* Enlace para descargar
+* Muy buenos días a todos.
+	- Buenas, Soy Juan Carlos Sáez y vengo a presentaros la asignatura AILA	
+* Esta presentación la tenéis accesible en esta URL: 
+	- Os la comparto para que tengáis mis datos de contacto y tengáis acceso a algunos enlaces....
+---
+* Bueno aquí tenéis mi dirección de correo
+* Sobre mí merece la pena comentar que soy
+	- Prof...
+	- También soy miembro del Grupo de...
+		* Aquí os dejo indicadas algunas de las cosas en las que investigamos...
+		*
+	- Y por último comentar que soy el representante en la UCM de la ...
+		- Sede en la Universidad de Berkely
+		- Sobre esta asoc: lo que más os puede interesar es su revista LOGIN que tiene artículos técnicos sobre seguridad y sistemas muy potentes
+			* Aquí os dejo el enlace para acceder a esta revista con cuenta UCM..
+			* Os lo comparto porque muchos de estos artículos tienen relación con lo que se ve en la asignatura...
 -->
 
 
@@ -51,7 +59,7 @@ revealjs-url: "."
 
 ## Objetivo
 
-* Estudio de la arquitectura interna:
+Estudio de aspectos avanzados de sistemas operativos
 
 ::: {.columns}
 
@@ -73,95 +81,107 @@ revealjs-url: "."
 
 <!-- NOTES
 
-* Profundizar en los conceptos adquiridos en la asignatura _Sistemas Operativos_ 
-* Especial hincapié en 
-	1. Programación en modo kernel
-	1. Principales abstracciones _transversales_ del kernel
-	1. Interacción modo usuario - modo kernel
-	1. Interacción entre el HW y el SW
-* Estudio de casos prácticos
-	- kernel Linux
-	- SO Android 
-
-
-
-- El principal objetivo de esta asignatura es profundizar en .... haciendo especial hincapie en 4 aspectos clave de los SO
-	1. Programación en MK e Interaccion MK/MU
-	2. Escenarios de interacción entre el HW y el SW a nivel
-- Todo esto se intenta llevar a cabo con un enfoque muy práctico, en el que haremos un estudio del kernel Linux y de la arquitectura interna del SO Android
-	* Como me imagino que ya sabeis, Android está basado en el kernel Linux
-	* Mediante el conocimiento del kernel en sí, iniciaremos el estudio en produndidad de Android	
+Objetivo, analisis/estudio de aspectos avanzados de SO mediante el estudio de 2 casos prácticos
+	- kernel Linix
+	- SO android
 -->
 
 
 ## Kernel Linux: evolución desde 1991
 
-\centering
-
 **Líneas de código de las distintas versiones**
 
 ![](charts/lines-of-code.png){width=97%} \
 
+::: {fontsize=footnotesize}
 
-\begin{flushright}
-\tiny
-Source: https://www.linuxcounter.net
-\end{flushright}
+:::: {align=right}
 
+Fuente: <https://www.linuxcounter.net>
+
+::::
+
+:::
+
+<!-- NOTES
+* La primera parte de la asignatura se centra en el estudio del kernel Linux, cuya complejidad no ha parado de crecer desde su creación en 1991
+	- Como se muestra en esra figura el kernel que constaba inicialmente de unas decenas de miles de lineas de codigo a más de 20 millones en la actualidad
+-->	
 
 
 ## Interactive map of the Linux kernel
 
-\vspace{-0.2cm}
+![](charts/Linux_kernel_map.png){width=78%}\ 
 
-\centering
+::: {fontsize=footnotesize}
 
-![](charts/Linux_kernel_map.png){width=78%} \
+:::: {align=right}
 
-\footnotesize
+Fuente: <http://www.makelinux.net/kernel_map>
 
-`http://www.makelinux.net/kernel_map/`
+::::
+
+:::
+
+
+
 
 <!-- NOTES
-* Este diagrama, que es más bien informal recoge todos y cada uno de los subsistemas del kernel
+* Esta rápida evolución del kernel ha dado lugar a un monstruo que bien puede representarse mediante esta figura	
+* Este diagrama recoge todos y cada uno de los subsistemas del kernel
 	- Para cada subsistema (ZOOM), se muestran las estructuras y tipos de datos principales que se definen y usan
 		- Así como una relación entre estos y los de otros susistemas...
-* ESTO ES MÁS REPRESENTATIVO DEL KERNEL LINUX ACTUAL...
-	- Algo muy complejo
 * Bueno como curiosidad, comentar que en esta web de aquí tenéis accesible una versión interactiva de este diagrama
 	- Donde no solo ZOOM sino que al hacer click en un tipo de datos nos lleva a la etiqueta correspondiente...
+--
+* Si alguien quiere contribuir a la comunidad de Linux creando parches y ser un verd. hacker del nucleo, no es una buena idea meterse a mirar el código directamente
+	- Antes de nada es preciso conocer los aspectos o abstracciones comunes que están presentes en todos los subsistemas del núcleo 	
 -->	
 
 
 ## Abstracciones comunes del kernel
 
-* Implementación de llamadas al sistema
-* Pseudo sistemas de ficheros: /proc, /sys
 * Estructuras de datos del kernel
+* Implementación de llamadas al sistema
 * Gestión de memoria dinámica
 	- `kmalloc()`, `vmalloc()`, `kfree()`, `vfree()`
 * Mecanismos para diferir el trabajo
 * Temporizadores del kernel
+* Pseudo sistemas de ficheros: /proc, /sys
 * Mecanismos de sincronización en el kernel
 * ...
 
 <!-- NOTES
+* Familiarizare con estas abstracciones comunes es el objetivo principal de las prácticas de la asignatura
 * Aquí se recoge un listado de cosas que se usan por todo el kernel
+	- Como ...
 	- Por ejemplo, 2 mecanismos basicos de interacción con los 
 		* IMpl... Pseudo sistemas de ficheros
 	- Estructuras de datros genericas ...
 	- BHW
-* Si uno conoce estas cosas, ya es mucho más facil seguir la ejecucion (no tiene nada que ver vamos...)	
+* Al finalizar las prácticas, uno ya es capaz de dominar ... y puede afrontar más facilmente la labor de aprendizaje del kernel	
 -->
 
-## Uso de sistemas operativos en el último año
+## Uso de sistemas operativos 
 
+[_Android OS está basado en el kernel Linux_]{color=blue}
 
 ![](charts/pie.png){width=60% align=center}\ 
 
-<!--
-Datos: http://gs.statcounter.com/os-market-share
+:::: {align=right}
+
+Datos: <http://gs.statcounter.com/os-market-share>
+
+::::
+
+<!-- NOTES
+* Una pregunta que surge de forma natural en torno al kernel Linux, es cuánto se usa en el mundo?
+* Atendiendo a los datos recogidos en el último año y teniendo en cuenta el tráfico web registrado, el kernel Linux se usa una barbaridad (Const. más del 40% del mercado mundial)
+	- Pero sorprendentemente, el uso no viene de las dist. de Linux convencionales sino de usuarios de Android
+	- Android, como me imagino que sabeis, es un SO basado en el kernel Linix
+* Por lo tanto, el estudio del SO android es clave también..	
 -->
+
 
 ## Android: a Linux-based OS
 
@@ -169,23 +189,9 @@ Datos: http://gs.statcounter.com/os-market-share
 
 
 <!-- NOTES
-* En la actualidad la versión "Androidizada" del kernel constituye un *fork* sustancial de Linux
----
-* Pasemos a ver una visión general sobre la arquitectura interna y los componentes de Android.
-	- Este diagrama refleja las 4 capas de software en la arquitecura de Android
-* [ Descripción de las Capas ]
-	1. En la capa de más alto nivel se encuentran las aplicaciones de usuario en Android que se desarrollan en Java
-	2. La capa inmediatamente inferior está formada por distintos Servicios del Sistema que constituten el Application Framework
-		- La seña de identidad de Android se encuentra en esta capa que ha sido desarrollada enteramente por Google
-	3. Justo por debajo se situan dos componentes críticos de Android: Las librerías y el Android Runtime
-	4. La capa inferior de la arquitectura está formada por el kernel Linux
-[COMENTARIOS DE LENGUAJES DE PROGRAMACIÓN]	
-* A pesar de que ahora le vamos a dedicar tiempo a describir cada capa aprovecho este diagrama para que tengáis una idea de qué lenguaje o lenguajes de programación se utilizan en cada nivel
-	1. Esencialmente todo lo que aparece en azul constituye código Java
-		- Es cierto que excepcionalemente se puede invocar código "C" nativo en algunos casos, pero mayoritariamente es Java
-	2. Las Librerías nativaes y La MV Dalvik están programadas en C o C++ 
-	3. Finalmente, como sabéis el kernel Linux está programado en C puro aunque también se usa ensamblador para realizar tareas de Bajo nivel
-* Todos estos lenguajes de programación se utilizan en Android…
+* La segunda parte de la asignatura está destinada al análisis de la arquitectura interna de ANdroid
+	- En esta segunda parte veremos que Android es muy diferente a GNU Linux
+	- Veremos de hecho las diferencias entre El kernel linux convencional y el que usa android, que tiene extensiones muy particulares
 -->
 
 
@@ -208,20 +214,9 @@ Datos: http://gs.statcounter.com/os-market-share
 
 
 <!-- NOTES
-- Más cosas...
 [PROGRAMA]
 - El programa de AILA está estructurado en estos 6 módulos:
-	- ENUM: LINUX ...
-	- Por último el modulo 6 de la asignatura se centra en ver en detalle la arquitectura interna del SO Android
-		- [DIFERENCIAS/SIMILITUDES] Aquí también versmos cuales son los asp. similares y las diferencias entre GNU/Linux ... y Android
-[DETALLES EL PRIMER MODULO]
-- Como he comentado antes
-	- Hoy comenzaremos con el Primer modulo
-		* En este primer modulo que nos llevará estas 2 primeras semamans de clase
-		* Veremos una breve Introducción sobre los sistemas UNIX y LInux, y la estr del SO
-		*  A cont. veremos aspectos avanzados sobre los módulos, que usaréis en la primera práctica de la asignatura
-
-
+	- Esta información la tenéis en la ficha de la asignatura así que no me paro a detallarla
 -->
 
 
@@ -284,41 +279,6 @@ Datos: http://gs.statcounter.com/os-market-share
 * POR AHORA NO PODÉIS TOMARLO PRESTADO, pero ya os avisaré cuando podáis hacerlo
 -->	
 
-
-
-
-## Prácticas (I)
-
-* Sobre GNU/Linux Debian 9.5 ("stretch")
-	- Máquina Virtual del laboratorio (64 bits)
-	- Linux Kernel v4.9.111 (julio de 2018) 
-* 5 prácticas
-	1. Uso avanzado de módulos del kernel
-	1. Implementación de llamadas al sistema 
-	1. Desarrollo de driver para un dispositivo USB
-	1. Gestión de procesos y sincronización en el kernel
-	1. Gestión de interrupciones y trabajos diferidos
-
-
-<!-- NOTES
-[PASAR A PRACTICAS!!]
-- Bueno hablemos ahora de las prácticas...
-- Las prácticas de la asignatura serán sobre Linux
-	*  [2 cosas: LAB y DESCARGA...] Para ello usareis una MV que hay instalada en el lab y que os podéis descargar
-	* Esta máquina contiene una distribución Debian de 64 bits 
-	* Para las prácticas se usará obligatoriamente el kernel linux v ….
-		- Esta es una versión muy reciente del kernel (Finales de julio de este año) 
-			* Se ha escogido esa version específica, porque esta se usa en muchas versiones de Android
-				- Concretamente, en la MV de android que usaremos hay una versión del kernel similar
-				- Está bien que manejeis
-		- Es obligatorio usar este kernel
-			* Las transparencias documentan exactamente las funciones del API de esta versión del kernel
-- Bueno, concretamente habrá 5 prácticas, cuya temática teneis aquí disponible
-	1. Módulos del kernel Linux
-	2. Implementación de llamadas al sistema
-	3. Procesos y Sincro
-	4. Interrupciones y mecanismos para diferir el trabajo en Linux
--->
 
 ## Método de evaluación 
 
