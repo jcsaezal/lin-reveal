@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2019-2020
+subtitle: Curso 2020-2021
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
