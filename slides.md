@@ -92,21 +92,42 @@ Fuente: <http://www.makelinux.net/kernel_map>
 ## Abstracciones comunes del kernel
 
 * Estructuras de datos del kernel
+
 * Implementación de llamadas al sistema
+
 * Gestión de memoria dinámica
+	
 	- `kmalloc()`, `vmalloc()`, `kfree()`, `vfree()`
+	
 * Mecanismos para diferir el trabajo
+
 * Temporizadores del kernel
+
 * Pseudo sistemas de ficheros: /proc, /sys
+
 * Mecanismos de sincronización en el kernel
+
 * ...
+
+	
+
+
+## ¿Por qué aprender Linux?
+
+* Usado en los 500 supercomputadores más potentes del mundo
+	* [<https://www.zdnet.com/article/linux-totally-dominates-supercomputers/>]{fontsize=footnotesize}
+	* [<https://www.top500.org/statistics/details/osfam/1/>]{fontsize=footnotesize}
+
+![](charts/supercomp2.jpg){width=70% align=center}\ 
+
+
 
 
 ## Uso de sistemas operativos 
 
 [_Android OS está basado en el kernel Linux_]{color=blue}
 
-![](charts/pie.png){width=60% align=center}\ 
+![](charts/pie.png){width=55% align=center}\ 
 
 :::: {align=right}
 
@@ -192,6 +213,15 @@ B) Evaluación continua:
 ![](charts/notas.png){width=60% align=center}\ 
 
 
+
+
+
+## Organización sesiones curso 2020-21
+
+* Miércoles 14-16h (Online)
+	* Teoría + Laboratorio
+* Viernes  14-16h (Presencial)
+	* Laboratorio (2h)
 
 ## 
 
