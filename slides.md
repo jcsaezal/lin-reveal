@@ -38,7 +38,7 @@ revealjs-url: "."
 ## Objetivo
 
 * Estudio de aspectos avanzados de sistemas operativos
-	- 2 créditos de teoría + 4 créditos de lab.
+	- 2 créditos de teoría + 4 créditos de lab (Primer Cuatrimestre)
 
 ::: {.columns}
 
