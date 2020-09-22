@@ -23,7 +23,7 @@ revealjs-url: "."
 
 
 * Miembro del grupo de investigación [[ArTeCS]{.underline}](https://artecs.dacya.ucm.es/) 
-	- Interacción entre el software de sistema y la arquitectura
+	- Optimización de software de sistema para nuevas arquitecturas
 	- Computación de altas prestaciones 
 	- Arquitectura de computadores
 	- ...
