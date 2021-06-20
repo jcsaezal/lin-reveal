@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2020-2021
+subtitle: Curso 2021-2022
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
@@ -38,19 +38,20 @@ revealjs-url: "."
 ## Objetivo
 
 * Estudio de aspectos avanzados de sistemas operativos
-	- 2 créditos de teoría + 4 créditos de lab (Primer Cuatrimestre)
+	- 2 créditos de teoría + 4 créditos de lab 
+	- Horario (Primer Cuatrimestre): X,V 14:00h-16:00h
 
 ::: {.columns}
 
 :::: {.column}
 
-![](charts/tux-cool.jpg){width=70%}\  
+![](charts/tux-cool.jpg){width=60%}\  
 
 :::: 
 
 :::: {.column}
 
-![](charts/android-logo.png){width=70%}\ 
+![](charts/android-logo.png){width=60%}\ 
 
 :::: 
 
@@ -127,7 +128,7 @@ Fuente: <http://www.makelinux.net/kernel_map>
 
 [_Android OS está basado en el kernel Linux_]{color=blue}
 
-![](charts/pie.png){width=55% align=center}\ 
+![](charts/pie-new.png){width=65% align=center}\ 
 
 :::: {align=right}
 
@@ -216,6 +217,8 @@ B) Evaluación continua:
 
 
 
+<!--
+
 ## Organización sesiones curso 2020-21
 
 * Miércoles 14-16h (Online)
@@ -223,10 +226,11 @@ B) Evaluación continua:
 * Viernes  14-16h (Presencial)
 	* Laboratorio (2h)
 
+-->
+
 ## 
 
 ![](charts/questions2.jpg){width=80% align=center}\ 
 
 Presentación disponible en <http://bit.ly/2wJ4fqH>
-
 
