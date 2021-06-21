@@ -28,7 +28,7 @@ revealjs-url: "."
 	- Arquitectura de computadores
 	- ...
 
-* Representante en la UCM de la asociación internacional USENIX
+* Representante en la UCM de la asociación internacional [[USENIX](https://www.usenix.org/)]{.underline}
 	- Login (USENIX Magazine) - [link a ejemplares en PDF](https://drive.google.com/drive/folders/0B2SwhQV-zKm2YVJmck9vUDh5ZzA?usp=sharing)  
 
 
