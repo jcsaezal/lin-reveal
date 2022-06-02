@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2021-2022
+subtitle: Curso 2022-2023
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
@@ -39,7 +39,7 @@ revealjs-url: "."
 
 * Estudio de aspectos avanzados de sistemas operativos
 	- 2 créditos de teoría + 4 créditos de lab 
-	- Horario (Primer Cuatrimestre): X,V 14:00h-16:00h
+	- Horario (Primer Cuatrimestre): M,J 14:00h-16:00h
 
 ::: {.columns}
 
@@ -199,6 +199,19 @@ En la práctica 3 se desarrollará un driver en Linux para el dispositivo Blinks
 :::: 
 
 :::
+
+
+
+## Prácticas 
+
+Algunas prácticas se realizarán sobre Raspberry Pi + Placa E/S 
+
+
+
+![](charts/placa_bee.jpg){align=center width=60%}\
+
+
+
 
 
 ## Método de evaluación 
