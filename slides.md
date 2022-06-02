@@ -39,19 +39,20 @@ revealjs-url: "."
 
 * Estudio de aspectos avanzados de sistemas operativos
 	- 2 créditos de teoría + 4 créditos de lab 
-	- Horario (Primer Cuatrimestre): M,J 14:00h-16:00h
+	- Horario (Primer Cuatrimestre): M,J: 14:00h-16:00h
+	- Ofertada a estudiantes de GII, GIC, GIS, GDV y DG II-Matemáticas
 
 ::: {.columns}
 
 :::: {.column}
 
-![](charts/tux-cool.jpg){width=60%}\  
+![](charts/tux-cool.jpg){width=50%}\  
 
 :::: 
 
 :::: {.column}
 
-![](charts/android-logo.png){width=60%}\ 
+![](charts/android-logo.png){width=50%}\ 
 
 :::: 
 
