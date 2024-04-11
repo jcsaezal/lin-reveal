@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2022-2023
+subtitle: Curso 2024-2025
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
@@ -27,9 +27,10 @@ revealjs-url: "."
 	- Computación de altas prestaciones 
 	- Arquitectura de computadores
 	- ...
-
 * Representante en la UCM de la asociación internacional [[USENIX](https://www.usenix.org/)]{.underline}
-	- Login (USENIX Magazine) - [link a ejemplares en PDF](https://drive.google.com/drive/folders/0B2SwhQV-zKm2YVJmck9vUDh5ZzA?usp=sharing)  
+	- Login (USENIX Magazine) 
+		- [link a ejemplares en PDF](https://www.usenix.org/publications/login)
+		- [Versión online](https://www.usenix.org/publications/loginonline)  
 
 
 :::
@@ -40,7 +41,7 @@ revealjs-url: "."
 * Estudio de aspectos avanzados de sistemas operativos
 	- 2 créditos de teoría + 4 créditos de lab 
 	- Horario (Primer Cuatrimestre): M,J: 14:00h-16:00h
-	- Ofertada a estudiantes de GII, GIC, GIS, GDV y DG II-Matemáticas
+	- Ofertada en GII, GIC, GIS, GDV , GIDIA y DG II-Matemáticas
 
 ::: {.columns}
 
@@ -111,7 +112,36 @@ Fuente: <http://www.makelinux.net/kernel_map>
 
 * ...
 
-	
+
+
+
+## ¿Por qué aprender Linux?
+
+* Base de tecnologías clave de contenedores 
+
+::: {.columns}
+
+:::: {.column}
+
+![](charts/docker-logo.png){width=47%}\  
+
+:::: 
+
+:::: {.column}
+
+![](charts/kubernetes-logo.png){width=70%}\ 
+
+:::: 
+
+:::
+
+
+![](charts/lxc-logo.png){width=40%}\ 
+
+
+
+
+
 
 
 ## ¿Por qué aprender Linux?
