@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2024-2025
+subtitle: Curso 2025-2026
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
@@ -27,10 +27,8 @@ revealjs-url: "."
 	- Computación de altas prestaciones 
 	- Arquitectura de computadores
 	- ...
-* Representante en la UCM de la asociación internacional [[USENIX](https://www.usenix.org/)]{.underline}
-	- Login (USENIX Magazine) 
-		- [link a ejemplares en PDF](https://www.usenix.org/publications/login)
-		- [Versión online](https://www.usenix.org/publications/loginonline)  
+	
+	
 
 
 :::
