@@ -83,7 +83,7 @@ Fuente: <https://www.linuxcounter.net>
 
 :::: {align=right}
 
-Fuente: <http://www.makelinux.net/kernel_map>
+Fuente: <https://makelinux.github.io/kernel/map/>
 
 ::::
 
@@ -272,7 +272,23 @@ B) Evaluación continua:
 
 ## 
 
-![](charts/questions2.jpg){width=80% align=center}\ 
+
+::: {.columns}
+
+:::: {.column width=60%}
+
+![](charts/questions2.jpg){width=90%}\  
+
+:::: 
+
+:::: {.column width=40%}
+
+![](charts/qrcode.png){width=90%}\ 
+
+:::: 
+
+:::
+
 
 Presentación disponible en <http://bit.ly/2wJ4fqH>
 
