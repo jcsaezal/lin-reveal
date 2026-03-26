@@ -3,7 +3,7 @@ title: Arquitectura Interna de Linux y Android
 subtitle: Curso 2026-2027
 author:
 - Juan Carlos Sáez Alcaide
-- <http://bit.ly/2wJ4fqH>
+- <https://jcsaezal.github.io/lin-reveal>
 theme: white
 pandoc_columns: true
 revealjs-url: "."
@@ -286,5 +286,5 @@ B) Evaluación continua:
 :::
 
 
-Presentación disponible en <http://bit.ly/2wJ4fqH>
+Presentación disponible en <https://jcsaezal.github.io/lin-reveal>
 
