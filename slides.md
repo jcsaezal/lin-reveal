@@ -1,6 +1,6 @@
 ---
 title: Arquitectura Interna de Linux y Android
-subtitle: Curso 2025-2026
+subtitle: Curso 2026-2027
 author:
 - Juan Carlos Sáez Alcaide
 - <http://bit.ly/2wJ4fqH>
@@ -13,11 +13,10 @@ revealjs-url: "."
 
 ## Sobre mí
 
-
 **Juan Carlos Sáez Alcaide** (<jcsaezal@ucm.es>)
 
 
-::: incremental 
+
 
 * Prof. del Dpto. Arquitectura de Computadores y Automática 
 
@@ -29,9 +28,6 @@ revealjs-url: "."
 	- ...
 	
 	
-
-
-:::
 
 
 ## Objetivo
